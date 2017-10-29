@@ -6,7 +6,6 @@ const express = require('express'),
 			r = require('rethinkdb'),
 			socketIO = require('socket.io'),
 			config = require('./config'),
-			model = require('./models'),
 			router = require('./router');
 
 const app = express();

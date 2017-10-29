@@ -195,3 +195,37 @@
 2017-10-27T17:03:36.771924987 8537.181411s info: Table 17fcd5a0-674f-4a92-994b-243fefeb9015: Added replica on this server.
 2017-10-27T17:03:36.774097346 8537.183584s info: Table 4cf303c2-8b9e-48d4-9fab-a3f10a907cb2: This server is Raft leader for term 1. Latest log index is 0.
 2017-10-27T17:03:36.775609020 8537.185096s info: Table 17fcd5a0-674f-4a92-994b-243fefeb9015: This server is Raft leader for term 1. Latest log index is 0.
+2017-10-27T17:13:14.990931021 9115.400419s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2017-10-27T17:13:14.991131467 9115.400618s notice: Shutting down client connections...
+2017-10-27T17:13:14.991944837 9115.401432s notice: All client connections closed.
+2017-10-27T17:13:14.991962889 9115.401449s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-10-27T17:13:14.996985961 9115.406472s notice: Storage engine shut down.
+2017-10-27T18:42:19.700276799 0.322160s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
+2017-10-27T18:42:19.706406324 0.328290s notice: Running on Linux 4.10.0-37-generic x86_64
+2017-10-27T18:42:19.706467932 0.328350s notice: Loading data from directory /home/john/sites/kanban-backend/rethinkdb_data
+2017-10-27T18:42:19.721486701 0.343369s info: Automatically using cache size of 2155 MB
+2017-10-27T18:42:19.722352777 0.344235s notice: Listening for intracluster connections on port 29015
+2017-10-27T18:42:19.746309593 0.368192s notice: Listening for client driver connections on port 28015
+2017-10-27T18:42:19.746508504 0.368390s notice: Listening for administrative HTTP connections on port 8080
+2017-10-27T18:42:19.746512425 0.368394s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-27T18:42:19.746515350 0.368397s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-27T18:42:19.746518283 0.368400s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-10-27T18:42:19.746521516 0.368403s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-10-27T18:42:19.746533220 0.368415s notice: Server ready, "john_ThinkPad_X1_Carbon_9jq" e036b42c-b0f8-4fae-b3f2-bd4e84b8233c
+2017-10-27T18:42:20.936149382 1.558032s info: Table 17fcd5a0-674f-4a92-994b-243fefeb9015: Starting a new Raft election for term 2.
+2017-10-27T18:42:20.946783536 1.568665s info: Table 17fcd5a0-674f-4a92-994b-243fefeb9015: This server is Raft leader for term 2. Latest log index is 3.
+2017-10-27T18:42:21.531539521 2.153422s info: Table 4cf303c2-8b9e-48d4-9fab-a3f10a907cb2: Starting a new Raft election for term 2.
+2017-10-27T18:42:21.534716759 2.156599s info: Table 4cf303c2-8b9e-48d4-9fab-a3f10a907cb2: This server is Raft leader for term 2. Latest log index is 3.
+2017-10-27T20:13:30.192069363 4686.893989s warn: Received invalid clustering header from [::1]:34244, closing connection -- something might be connecting to the wrong port.
+2017-10-27T20:13:30.259720170 4686.961640s warn: Received invalid clustering header from [::1]:34246, closing connection -- something might be connecting to the wrong port.
+2017-10-27T20:13:35.269707861 4691.971628s warn: Received invalid clustering header from [::1]:34288, closing connection -- something might be connecting to the wrong port.
+2017-10-28T16:39:21.489173047 7337.502299s notice: Removing file /home/john/sites/kanban-backend/rethinkdb_data/17fcd5a0-674f-4a92-994b-243fefeb9015
+2017-10-28T16:39:21.489184681 7337.502310s info: Table 17fcd5a0-674f-4a92-994b-243fefeb9015: Deleted the table.
+2017-10-28T16:39:21.496832814 7337.509958s notice: Removing file /home/john/sites/kanban-backend/rethinkdb_data/4cf303c2-8b9e-48d4-9fab-a3f10a907cb2
+2017-10-28T16:39:21.496839493 7337.509964s info: Table 4cf303c2-8b9e-48d4-9fab-a3f10a907cb2: Deleted the table.
+2017-10-28T16:39:21.556475065 7337.569600s info: Table c1b2f9ea-16bf-4b5a-bb17-ac155ba44c70: Starting a new Raft election for term 1.
+2017-10-28T16:39:21.558116229 7337.571241s info: Table c1b2f9ea-16bf-4b5a-bb17-ac155ba44c70: Added replica on this server.
+2017-10-28T16:39:21.558157728 7337.571283s info: Table 425c6731-0b8d-4518-8659-b23be59e4ed8: Starting a new Raft election for term 1.
+2017-10-28T16:39:21.558240503 7337.571366s info: Table 425c6731-0b8d-4518-8659-b23be59e4ed8: Added replica on this server.
+2017-10-28T16:39:21.560979776 7337.574105s info: Table c1b2f9ea-16bf-4b5a-bb17-ac155ba44c70: This server is Raft leader for term 1. Latest log index is 0.
+2017-10-28T16:39:21.561034140 7337.574159s info: Table 425c6731-0b8d-4518-8659-b23be59e4ed8: This server is Raft leader for term 1. Latest log index is 0.

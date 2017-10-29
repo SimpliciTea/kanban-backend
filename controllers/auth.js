@@ -1,9 +1,9 @@
 'use strict';
-const jwt = require('jwt-simple');
-const config = require('../config');
-const r = require('rethinkdb');
-const utils = require('../rdbUtils');
-const bcrypt = require('bcrypt');
+const r = require('rethinkdb'),
+		  jwt = require('jwt-simple'),
+		  bcrypt = require('bcrypt'),
+		  config = require('../config');
+
 
 const tokenForUser = user => {
 	const timestamp = new Date().getTime();
@@ -32,7 +32,8 @@ exports.signup = (req, res, next) => {
 		bcrypt.hash(password, 10).then(hashedPassword => {
 			r.table('users').insert({	
 				email, 
-				password: hashedPassword 
+				password: hashedPassword,
+				boardIds: []
 			}).run(req._conn).then(result => {
 				req._conn.close();
 				return res.json({ token: tokenForUser(email) });
@@ -42,4 +43,4 @@ exports.signup = (req, res, next) => {
 	}).catch(err => {
 		console.log('error: ', err);
 	})
-}
+};

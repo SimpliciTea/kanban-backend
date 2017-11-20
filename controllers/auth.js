@@ -2,14 +2,18 @@
 const r = require('rethinkdb'),
 		  jwt = require('jwt-simple'),
 		  bcrypt = require('bcrypt'),
-		  config = require('../config');
+		  config = require('../config'),
+		  boards = require('./boards');
 
 
 const tokenForUser = user => {
-	const timestamp = new Date().getTime();
-	return jwt.encode({ sub: user.id, iat: timestamp }, config.secret);
+	const timestamp = Date.now();
+	return jwt.encode({ sub: user, iat: timestamp }, config.secret);
 }
 
+exports.signin = (req, res, next) => {
+	res.send({ token: tokenForUser(req.body.email) })
+}
 
 exports.signup = (req, res, next) => {
 	const { email, password } = req.body;

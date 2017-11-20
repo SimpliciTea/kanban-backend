@@ -14,7 +14,7 @@ const app = express();
 /* MIDDLEWARE */
 app.use(morgan('combined'));
 app.use(cors());
-app.use(bodyParser.json());
+app.use(bodyParser.json({ type: '*/*' }));
 router(app);
 
 

@@ -18,7 +18,7 @@ passport.use(new LocalStrategy({
 
 		bcrypt.compare(password, user.password, (err, isMatch) => {
 			if (err) { return done(err); }
-			if (!isMatch) { return done(null, false); }
+			if (!isMatch) { return done(null, false, "Could not find matching credentials"); }
 			else return done(null, user);
 		})
 	})
@@ -29,8 +29,6 @@ passport.use(new JwtStrategy({
 	secretOrKey: config.secret,
 	passReqToCallback: true
 }, (req, payload, done) => {
-
-	console.log('lsjfdklsdfjs')
 	r.table('users').get(payload.sub).run(req._conn).then(user => {
 		if (user) return done(null, user);
 		else return done(null, false);

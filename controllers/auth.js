@@ -12,6 +12,7 @@ const tokenForUser = user => {
 }
 
 exports.signin = (req, res, next) => {
+	// sign in authentication is handled in passport middleware
 	res.send({ token: tokenForUser(req.body.email) })
 }
 

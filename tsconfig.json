@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+      "sourceMap": true,
+      "strictNullChecks": false,
+      "esModuleInterop": true,
+      "target": "es6",
+      "lib": ["es2017", "es6", "es5", "dom", "scripthost"],
+      "module": "commonjs",
+      "baseUrl": ".",
+      "moduleResolution": "node",
+      "paths": {
+          "@controller": ["src/controller"],
+          "@model": ["src/model"],
+          "@service": ["src/service"]
+      }
+  },
+  "include": [
+      "src/**/*",
+  ],
+  "exclude": [
+      "node_modules",
+  ]
+}
